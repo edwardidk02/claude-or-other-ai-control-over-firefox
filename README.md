@@ -74,7 +74,11 @@ server/firefox_mcp.py  ── HTTP long-poll on 127.0.0.1:18765, token-protected
    `server/config.json` and click **Save**. The development build reads the token from
    `extension/config.js` automatically.
 
-5. Start a **new** Claude Code session and ask it to do something in Firefox. The badge shows **ON**
+5. Optional quick test without an AI client:
+   `python try_bridge.py browser_status`, then
+   `python try_bridge.py tabs_create "{\"url\": \"https://example.com\"}"`.
+
+6. Start a **new** Claude Code session and ask it to do something in Firefox. The badge shows **ON**
    while a session is connected. In Claude Code, `/mcp` should list `claude-in-firefox` as connected.
 
 | Badge | Meaning |
@@ -125,6 +129,11 @@ Several agent sessions can use the bridge at the same time: the first one hosts 
 - Bump `version` in `extension/manifest.json` before building a new release.
 - Never commit `server/config.json`, `extension/config.js` or anything in `dist/` that was built with
   your token (see `.gitignore`).
+
+## Privacy
+
+The extension sends nothing to the internet; see [PRIVACY.md](PRIVACY.md). What the AI agent you
+connect does with page content is up to that agent and its provider.
 
 ## License
 
