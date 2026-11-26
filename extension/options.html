@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Settings</title>
+<style>
+  body { font: 14px/1.5 system-ui, sans-serif; margin: 16px; max-width: 520px; color: #222; background: #fff; }
+  @media (prefers-color-scheme: dark) { body { color: #eee; background: #2b2a33; } input { background: #1c1b22; color: #eee; } }
+  label { display: block; margin: 12px 0 4px; font-weight: 600; }
+  input { width: 100%; box-sizing: border-box; padding: 6px 8px; border: 1px solid #888; border-radius: 4px; font: inherit; }
+  button { margin-top: 14px; padding: 6px 14px; font: inherit; }
+  p.hint { font-size: 12px; opacity: .75; margin: 4px 0 0; }
+  #status { margin-left: 10px; }
+</style>
+</head>
+<body>
+  <p>This extension only talks to a program on this computer (127.0.0.1). Enter the token from
+     the bridge's <code>server/config.json</code>.</p>
+  <label for="token">Token</label>
+  <input id="token" type="password" autocomplete="off" spellcheck="false">
+  <label for="port">Port</label>
+  <input id="port" type="number" min="1024" max="65535" placeholder="18765">
+  <p class="hint">Default 18765.</p>
+  <button id="save" type="button">Save</button><span id="status"></span>
+  <script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+# secrets: the shared bridge token
+server/config.json
+extension/config.js
+
+# build output (dist/ may contain a zip built with your token)
+dist/
+build/
+
+# local runtime files
+server/bridge.log
+screenshots/
+__pycache__/
+*.pyc
