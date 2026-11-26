@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Local Browser Bridge (dev)",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "Lets Claude Code control your own Firefox through a local bridge on 127.0.0.1.",
   "browser_specific_settings": {
     "gecko": {
